@@ -1,0 +1,41 @@
+{
+  "name": "react-shields-demo",
+  "version": "1.0.0",
+  "description": "React component shields.io badge",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "shields",
+    "badge"
+  ],
+  "author": "skycloud1030",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skycloud1030/react-shields-badge"
+  },
+  "scripts": {
+    "start": "webpack --progress --colors --watch --mode development",
+    "build": "webpack --mode production --progress --color",
+    "test": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "jest": "jest --coverage"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-shields-badge": "git+https://github.com/skycloud1030/react-shields-badge.git"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8"
+  }
+}
