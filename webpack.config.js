@@ -13,7 +13,7 @@ var config = {
     umdNamedDefine: true
   },
   externals: {
-    react: "react",
+    "react": "react",
     "react-dom": "react-dom"
   },
   plugins: plugins,
