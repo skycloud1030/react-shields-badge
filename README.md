@@ -2,7 +2,9 @@
 
 [![Travis](https://travis-ci.org/skycloud1030/react-shields-badge.svg?branch=master)](https://travis-ci.org/skycloud1030/react-shields-badge)
 [![Coverage Status](https://coveralls.io/repos/github/skycloud1030/react-shields-badge/badge.svg?branch=master)](https://coveralls.io/github/skycloud1030/react-shields-badge?branch=master)
+[![Version](https://img.shields.io/npm/v/react-shields-badge.svg)](https://www.npmjs.com/package/react-shields-badge)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Donloads](https://img.shields.io/npm/dm/react-shields-badge.svg)](https://www.npmjs.com/package/react-shields-badge)
 
 ### Install
 
