@@ -20,6 +20,8 @@ import "react-shields-badge/dist/react-shields-badge.css";
 
 ### Demo
 
+[Live Demo](https://skycloud1030.github.io/react-shields-badge/example/)
+
 ### Properties
 
 | Props           | Type  | Description                       | Default                 |
