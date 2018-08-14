@@ -1,6 +1,6 @@
 {
   "name": "react-shields-badge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React component shields.io badge",
   "license": "MIT",
   "main": "dist/react-shields-badge.js",
