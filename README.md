@@ -18,9 +18,14 @@ yarn add react-shields-badge --save
 ```js
 import Badge from "react-shields-badge";
 import "react-shields-badge/dist/react-shields-badge.css";
+
+<Badge data={["npm", "v1.0.0"]} />
+
 ```
 
 ### Demo
+
+![](https://github.com/skycloud1030/react-shields-badge/blob/gh-pages/image/demo.PNG?raw=true)
 
 - [preview](https://skycloud1030.github.io/react-shields-badge/example/)
 - [code](https://github.com/skycloud1030/react-shields-badge/blob/gh-pages/src/index.js)
