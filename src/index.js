@@ -13,6 +13,7 @@ export default class Badge extends React.PureComponent {
     color: PropTypes.array,
     backgroundColor: PropTypes.array,
     prefixCls: PropTypes.string,
+    className: PropTypes.string,
     onClick: PropTypes.func
   };
   static defaultProps = {
@@ -20,13 +21,14 @@ export default class Badge extends React.PureComponent {
     color: [],
     backgroundColor: [],
     prefixCls: "rc-shields",
+    className: "",
     onClick: () => {}
   };
   constructor(props) {
     super(props);
   }
   render() {
-    const { title, prefixCls } = this.props;
+    const { title, prefixCls, className } = this.props;
     const { data } = this.props;
     let { backgroundColor, color } = this.props;
     backgroundColor = backgroundColor.length === 0 ? backgroundColor_default : backgroundColor;
@@ -34,9 +36,9 @@ export default class Badge extends React.PureComponent {
 
     backgroundColor = backgroundColor.map(item => colorMap[item] || item);
     color = color.map(item => colorMap[item] || item);
-    
+
     return (
-      <span title={title} className={prefixCls} onClick={this.props.onClick}>
+      <span title={title} className={`${prefixCls} ${className}`} onClick={this.props.onClick}>
         {data.map((item, index) => (
           <span
             className={`${prefixCls}-badge`}
