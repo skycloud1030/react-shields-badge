@@ -23,8 +23,8 @@
     "dist"
   ],
   "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-shields-badge": "git+https://github.com/skycloud1030/react-shields-badge.git"
   },
   "devDependencies": {
@@ -34,8 +34,8 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^1.0.0",
-    "style-loader": "^0.22.1",
-    "webpack": "^4.12.2",
-    "webpack-cli": "^3.0.8"
+    "style-loader": "^0.23.1",
+    "webpack": "^4.23.0",
+    "webpack-cli": "^3.1.2"
   }
 }
