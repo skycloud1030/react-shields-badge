@@ -13,7 +13,7 @@ var config = {
     umdNamedDefine: true
   },
   externals: {
-    "react": "react",
+    react: "react",
     "react-dom": "react-dom"
   },
   plugins: plugins,
@@ -26,13 +26,13 @@ var config = {
         loader: "babel-loader",
         query: {
           cacheDirectory: true,
-          presets: ["env", "stage-0", "react"]
+          presets: ["@babel/env", "@babel/preset-react"]
         }
       },
       {
         test: /\.css$/,
         loader: "style-loader!css-loader"
-      },
+      }
     ]
   }
 };
