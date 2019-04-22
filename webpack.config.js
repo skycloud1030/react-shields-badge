@@ -9,6 +9,10 @@ var config = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js"
   },
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM"
+  },
   plugins: plugins,
   resolve: { alias: {} },
   module: {

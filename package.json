@@ -23,8 +23,8 @@
     "dist"
   ],
   "dependencies": {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-shields-badge": "git+https://github.com/skycloud1030/react-shields-badge.git"
   },
   "devDependencies": {
