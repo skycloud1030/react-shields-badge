@@ -20,7 +20,7 @@ function Badge(props) {
     // default color
     backgroundColor = config.backgroundColor;
   }
-  if (!Array.isArray(color) || backgroundColor.length === 0) {
+  if (!Array.isArray(color) || color.length === 0) {
     // default color
     color = config.color;
   }

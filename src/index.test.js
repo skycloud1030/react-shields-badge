@@ -16,6 +16,8 @@ describe("react-shields-badge", () => {
       color={["rgb(0, 0, 0)"]}
     />
   );
+  const controls_3 = mount(<Badge data="111" />);
+
   it("Should badge render data correct", () => {
     controls.instance();
     expect(controls.find(".rc-shields-badge").length).toBe(2);
@@ -33,6 +35,13 @@ describe("react-shields-badge", () => {
       .find(".rc-shields-badge")
       .at(1)
       .getDOMNode();
-    expect(badge2.getAttribute("style") === "background-color: rgb(111, 66, 193); color: rgb(0, 0, 0);").toBe(true);
+    expect(badge2.getAttribute("style") === "background-color: rgb(111, 66, 193); color: rgb(0, 0, 0);").toBe(
+      true
+    );
+  });
+
+  it("Should data is array", () => {
+    let c3 = controls_3.instance();
+    expect(c3).toBe(null);
   });
 });
