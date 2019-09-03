@@ -1,6 +1,6 @@
 {
   "name": "react-shields-badge",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "React component shields.io badge",
   "license": "MIT",
   "main": "dist/react-shields-badge.js",
@@ -24,8 +24,8 @@
     "dist"
   ],
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
