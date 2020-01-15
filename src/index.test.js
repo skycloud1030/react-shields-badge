@@ -35,9 +35,10 @@ describe("react-shields-badge", () => {
       .find(".rc-shields-badge")
       .at(1)
       .getDOMNode();
-    expect(badge2.getAttribute("style") === "background-color: rgb(111, 66, 193); color: rgb(0, 0, 0);").toBe(
-      true
-    );
+    expect(
+      badge2.getAttribute("style") ===
+        "background-color: rgb(111, 66, 193); color: rgb(0, 0, 0);"
+    ).toBe(true);
   });
 
   it("Should data is array", () => {
