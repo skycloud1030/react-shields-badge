@@ -3,18 +3,19 @@ var plugins = [];
 
 var config = {
   entry: {
-    "react-shields-badge": path.resolve(__dirname, "src/index.js")
+    "react-shields-badge": path.resolve(__dirname, "src/index.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
     library: "ReactShieldsBadge",
     libraryTarget: "umd",
-    umdNamedDefine: true
+    umdNamedDefine: true,
+    globalObject: `(typeof self !== 'undefined' ? self : this)`,
   },
   externals: {
     react: "react",
-    "react-dom": "react-dom"
+    "react-dom": "react-dom",
   },
   plugins: plugins,
   resolve: { alias: {} },
@@ -26,14 +27,13 @@ var config = {
         loader: "babel-loader",
         query: {
           cacheDirectory: true,
-          presets: ["@babel/env", "@babel/preset-react"]
-        }
+        },
       },
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader"
-      }
-    ]
-  }
+        loader: "style-loader!css-loader",
+      },
+    ],
+  },
 };
 module.exports = config;
