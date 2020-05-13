@@ -1,4 +1,5 @@
 import React from "react";
+import { useMemo, useCallback } from "react";
 import config from "./config";
 import PropTypes from "prop-types";
 const { colorMap } = config;
@@ -25,19 +26,37 @@ function Badge(props) {
     color = config.color;
   }
 
-  backgroundColor = backgroundColor.map(item => colorMap[item] || item);
-  color = color.map(item => colorMap[item] || item);
+  backgroundColor = backgroundColor.map((item) => colorMap[item] || item);
+  color = color.map((item) => colorMap[item] || item);
+
+  const clickClass = useMemo(() => {
+    return typeof props.onClick == "function" ? "rc-shields-badge-button" : "";
+  }, [props.onClick]);
+
+  const onClick = useCallback(
+    (data) => {
+      typeof props.onClick == "function" && props.onClick(data);
+    },
+    [props.onClick]
+  );
 
   return (
-    <span title={title} className={`${prefixCls} ${className}`} onClick={props.onClick}>
+    <span
+      title={title}
+      className={`${prefixCls} ${className}`}
+      onClick={onClick.bind(this, data)}
+    >
       {data.map((item, index) => {
-        let index_bgc = backgroundColor[index % backgroundColor.length];
-        let index_c = color[index % color.length];
+        const index_bgc = backgroundColor[index % backgroundColor.length];
+        const index_c = color[index % color.length];
         return (
           <span
-            className={`${prefixCls}-badge`}
+            className={`${prefixCls}-badge ${clickClass}`}
             key={index}
-            style={{ backgroundColor: index_bgc, color: index_c }}
+            style={{
+              backgroundColor: index_bgc,
+              color: index_c,
+            }}
           >
             {item}
           </span>
@@ -52,7 +71,7 @@ Badge.propTypes = {
   backgroundColor: PropTypes.array,
   prefixCls: PropTypes.string,
   className: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 Badge.defaultProps = {
   data: [],
@@ -60,7 +79,6 @@ Badge.defaultProps = {
   backgroundColor: [],
   prefixCls: "rc-shields",
   className: "",
-  onClick: () => {}
 };
 
 export default React.memo(Badge);
